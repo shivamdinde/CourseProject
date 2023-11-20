@@ -1,0 +1,11 @@
+package day2course;
+
+public class CourseProjectAvgDuration extends CourseDataCalculator {
+
+	@Override
+	public float doCalculation(CourseProject[] allCourses) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

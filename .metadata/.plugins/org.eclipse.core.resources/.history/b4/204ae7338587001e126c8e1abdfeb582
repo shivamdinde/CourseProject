@@ -1,0 +1,11 @@
+package day2course;
+
+public class CourseProjectAvgFees extends CourseDataCalculator {
+
+	@Override
+	public float doCalculation(CourseProject[] allCourses) {
+		allCourses
+		return 0;
+	}
+
+}

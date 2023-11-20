@@ -1,0 +1,14 @@
+package day2course;
+
+public class CourseProjectMain {
+
+	public static void main(String[] args) {
+		
+		CourseProject cp = new CourseProject(101,"PGDAC",600,"CDAC",106200);
+		
+		System.out.println(cp);
+		
+
+	}
+
+}
