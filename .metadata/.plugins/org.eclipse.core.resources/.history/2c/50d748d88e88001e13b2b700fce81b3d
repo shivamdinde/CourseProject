@@ -43,6 +43,7 @@ public class CourseProjectMain {
 		System.out.println("The Total Count Match of "+c1.getProviderName()+" "+c1.getDuration()+" is "+cf.processCourseInfo(courses, c1));
 		
 		System.out.println("---------------------------------------------");
+		
 		CourseInfoProcessor cf2 = new CourseAvgFeesMatch();
 		System.out.println("The Total AvgFees of "+c1.getProviderName()+" "+c1.getDuration()+" is "+cf2.processCourseInfo(courses, c1));
 		

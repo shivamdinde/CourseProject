@@ -1,0 +1,19 @@
+package day2course;
+
+public class CourseAvgFeesMatch implements CourseInfoProcessor {
+	
+	@Override
+	public float processCourseInfo(CourseProject[] CourseProjLocal,CourseInfo cinfo) {
+		int count=0;
+		int fees=0;
+		int avg=0;
+		for(CourseProject CourseArr:CourseProjLocal) {
+			if(CourseArr.getProvider().equals(cinfo.getProviderName()) && CourseArr.getDuration() == cinfo.getDuration())
+					count++;
+			avg = CourseArr.getFees();
+		}
+		
+		return avg/count ;
+	}
+
+}
