@@ -1,0 +1,9 @@
+package day2course;
+
+public class CourseCountMatch implements CourseInfoProcessor {
+	@Override
+	public float processCourseInfo(CourseInfo[] CourseInfo) {
+		
+	return 0;	
+	}
+}

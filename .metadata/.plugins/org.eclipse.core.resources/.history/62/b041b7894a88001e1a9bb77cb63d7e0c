@@ -1,0 +1,6 @@
+package day2course;
+
+public class CourseInfo {
+	private String ProviderName;
+	private int Duration;
+}

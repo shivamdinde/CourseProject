@@ -1,0 +1,11 @@
+package day2course;
+
+public class CourseAvgFeesMatch implements CourseInfoProcessor {
+
+	@Override
+	public float processCourseInfo(CourseProject[] CourseProjLocal,CourseInfo c1) {
+		
+		return 0;
+	}
+
+}
