@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="day2course.CourseAvgFeesMatch"/>
     <fullyQualifiedTypeName name="day2course.CourseInfo"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,21 @@
+package day2course;
+
+import java.util.Arrays;
+
+public class CourseCollection {
+	private static CourseProject[] availableCourses;
+	static {
+		availableCourses= new CourseProject[3];
+		
+		availableCourses[0] = new CourseProject(101,"PGDAC",22,"CDAC",106200);
+		availableCourses[1] = new CourseProject(102,"PGDAC",22,"CDAC",150000);
+		availableCourses[2] = new CourseProject(103,"PGDBDA",60,"CDAC2",116200);
+		
+	}
+	public static void printCourseNames(){
+		for(int i=0;i<availableCourses.length;i++) {
+			System.out.println(Arrays.toString(availableCourses));
+		}
+	}
+	
+}

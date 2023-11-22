@@ -1,0 +1,33 @@
+package day2course;
+
+import day2course.ProviderNotFoundException;
+
+public class CourseCollection {
+	private static CourseProject[] availableCourses;
+	static {
+		availableCourses= new CourseProject[3];
+		
+		availableCourses[0] = new CourseProject(101,"PGDAC",22,"CDAC",106200);
+		availableCourses[1] = new CourseProject(102,"PGDMC",22,"CDAC",150000);
+		availableCourses[2] = new CourseProject(103,"PGDBDA",60,"CDAC2",116200);
+		
+	}
+	public static void printCourseNames(String provider) throws ProviderNotFoundException{
+		int position = -1;
+		int index=0;
+		for(CourseProject CourseArr:availableCourses) {
+			if(CourseArr.getProvider().equals(provider)) {
+				System.out.println(CourseArr.getTitle());
+				index++;
+				break;
+			}
+			if(position == -1) {
+				String error = "The entered Provider name is invalid. It is not available";
+				ProviderNotFoundException nx = new ProviderNotFoundException(error, provider);
+				throw nx;			
+			}
+		
+		}
+	}
+	
+}

@@ -1,0 +1,9 @@
+package day2course;
+
+public class ProviderNotFoundException extends Exception {
+	private String invalidProviderName;
+	public ProviderNotFoundException(String errorMessage, String invalidProviderName) {
+		super(errorMessage);
+		this.invalidProviderName = invalidProviderName;
+	}
+}
