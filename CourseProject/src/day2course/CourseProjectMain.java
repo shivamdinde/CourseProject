@@ -50,7 +50,7 @@ public class CourseProjectMain {
 		//Todo6
 		
 		try {
-			String s = CourseCollection.printCourseNames("CDAC");
+			String s = CourseCollection.printCourseNames("CDACreg");
 			System.out.println(s);
 		} catch (ProviderNotFoundException e) {
 			// TODO Auto-generated catch block

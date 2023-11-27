@@ -1,0 +1,18 @@
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+
+public class FileCourse {
+	public void doRead() {
+		try (FileInputStream fin = new FileInputStream(SourceInfo)){
+			BufferedInputStream bin = new BufferedInputStream(fin);
+			
+			while(true) {
+				int data = bin.read();
+				if(data == -1)
+					break;
+				char ch = (char)data;
+				System.out.print(ch);
+			}
+	}
+ }
+}

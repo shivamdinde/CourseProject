@@ -1,0 +1,59 @@
+package Todo9;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+import day2course.CourseProject;
+
+public class CourseSerializationMain {
+
+	public static void main(String[] args) {
+		
+		String filePath = ".src/Todo9/CourseSerialization.txt";
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of Course Objects: ");
+		int size = sc.nextInt();
+		sc.nextLine();
+		CourseProject[] CourseArr = new CourseProject[size];
+		
+		for(int i=0;i<size;i++) {
+			System.out.println("Enter the CourseId: ");
+			int CourseId = sc.nextInt();
+			sc.nextLine();
+			
+			System.out.println("Enter Title: ");
+			String Title = sc.nextLine();
+			
+			System.out.println("Enter the Duration: ");
+			int Duration = sc.nextInt();
+			sc.nextLine();
+			
+			System.out.println("Enter Provider: ");
+			String Provider = sc.nextLine();
+			
+			System.out.println("Enter the Fees: ");
+			int Fees = sc.nextInt();
+			sc.nextLine();
+			
+			CourseArr[i]  =  new CourseProject(CourseId,Title,Duration,Provider,Fees);
+		}
+		
+		
+		try(
+				FileOutputStream fout = new FileOutputStream(filePath);
+				ObjectOutputStream out = new ObjectOutputStream(fout);
+				) {
+			out.writeObject(CourseArr);
+			
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
+
+}

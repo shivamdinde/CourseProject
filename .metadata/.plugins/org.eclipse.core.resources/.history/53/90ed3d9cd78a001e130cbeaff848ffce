@@ -1,0 +1,28 @@
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class FileCourse {
+	public void doRead() {
+		try (FileInputStream fin = new FileInputStream(SourceInfo)){
+			BufferedInputStream bin = new BufferedInputStream(fin);
+			
+			while(true) {
+				int data = bin.read();
+				if(data == -1)
+					break;
+				char ch = (char)data;
+				System.out.print(ch);
+			}
+			catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
+	}
+ }
+}

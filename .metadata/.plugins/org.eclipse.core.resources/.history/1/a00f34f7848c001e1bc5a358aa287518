@@ -1,0 +1,10 @@
+package Todo9;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+import day2course.CourseProject;
+
+public class CourseDeserializationMain {
+	
+}

@@ -1,0 +1,11 @@
+
+public class FileCourseMain {
+
+	public static void main(String[] args) {
+		String SourceInfo = String.valueOf(args[0]);
+		String DestinationInfo = String.valueOf(args[1]);
+		
+
+	}
+
+}

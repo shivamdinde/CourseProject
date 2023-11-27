@@ -1,0 +1,28 @@
+package Todo9;
+
+import java.util.Scanner;
+
+import day2course.CourseProject;
+
+public class CourseSerializationMain {
+
+	public static void main(String[] args) {
+		
+		String filePath = ".src/Todo9/CourseSerialization.txt";
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of Course Objects: ");
+		int size = sc.nextInt();
+		
+		CourseProject[] CourseArr = new CourseProject[size];
+		
+		try() {
+			
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package Todo9;
+
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+import day2course.CourseProject;
+
+public class CourseDeserializationMain {
+	String filePath = "CourseSerialization.txt";
+	try(
+			FileInputStream fin = new FileInputStream(filePath);
+			ObjectInputStream in = new ObjectInputStream(fin);
+			){
+			Object currentObject = in.readObject();
+			System.out.println(currentObject);
+			
+			CourseProject currentCourse = (CourseProject)currentObject;
+			
+	}
+	catch(Exception ex) {
+		ex.printStackTrace();
+	}
+}

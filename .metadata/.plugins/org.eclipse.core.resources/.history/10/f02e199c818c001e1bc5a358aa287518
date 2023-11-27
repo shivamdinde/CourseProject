@@ -1,0 +1,80 @@
+package Todo9;
+
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+import day2course.CourseProject;
+
+public class CourseSerializationMain {
+
+	public static void main(String[] args) {
+		
+		String filePath = "CourseSerialization.txt";
+		
+		File currentFile = new File(filePath);
+		if(currentFile.exists())
+			System.out.println("File found");
+		else
+			System.out.println("File not found, creating the same");
+			try {
+				currentFile.createNewFile();//Create a file
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of Course Objects: ");
+		int size = sc.nextInt();
+		sc.nextLine();
+		CourseProject[] CourseArr = new CourseProject[size];
+		
+		for(int i=0;i<size;i++) {
+			System.out.println("Enter the CourseId: ");
+			int CourseId = sc.nextInt();
+			sc.nextLine();
+			
+			System.out.println("Enter Title: ");
+			String Title = sc.nextLine();
+			
+			System.out.println("Enter the Duration: ");
+			int Duration = sc.nextInt();
+			sc.nextLine();
+			
+			System.out.println("Enter Provider: ");
+			String Provider = sc.nextLine();
+			
+			System.out.println("Enter the Fees: ");
+			int Fees = sc.nextInt();
+			sc.nextLine();
+			
+			CourseArr[i]  =  new CourseProject(CourseId,Title,Duration,Provider,Fees);
+		}
+		Serializedd();
+		
+
+	}
+	public static void Serializedd(){
+		int size=1;
+		String filePath=null;
+		CourseProject[] CourseArr = new CourseProject[size];
+		try(
+				FileOutputStream fout = new FileOutputStream(filePath);
+				ObjectOutputStream out = new ObjectOutputStream(fout);
+				) {
+			for(int i=0;i<CourseArr.length;i++) {
+				out.writeObject(CourseArr);
+			}
+			
+			System.out.println("Serialized Successfully");
+			
+		}
+		catch(Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+
+}

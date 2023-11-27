@@ -1,0 +1,10 @@
+package ToDo8;
+import day2course.CourseProject;
+
+public class CourseDataRead {
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,6 +1,8 @@
 package day2course;
 
-public class CourseProject {
+import java.io.Serializable;
+
+public class CourseProject implements Serializable {
 	private int CourseId;
 	private String Title;
 	private int Duration;
@@ -58,7 +60,11 @@ public class CourseProject {
 		System.out.println("Fees: "+getFees());
 		System.out.println("---------------------------------------------");
 	}
-	
+	@Override
+	public String toString() {
+		return "CourseProject [CourseId=" + CourseId + ", Title=" + Title + ", Duration=" + Duration + ", Provider="
+				+ Provider + ", Fees=" + Fees + "]";
+	}
 	//ToDo2
 	public static void counter() {
 		System.out.println("Count is: "+CountStudents);
